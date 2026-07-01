@@ -154,7 +154,8 @@ body {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   display: flex; flex-direction: column;
-  max-height: 100%;
+  /* topbar 54px + board-area padding 32px = 86px */
+  max-height: calc(100vh - 86px);
   transition: border-color .15s;
 }
 .column.drag-over { border-color: var(--purple); background: #F5F3FF; }
@@ -367,7 +368,8 @@ body {
 
   /* ── Board Area ── */
   .board-area { padding: 10px 12px; }
-  .column { width: 260px; }
+  /* topbar 54px + padding 20px */
+  .column { width: 260px; max-height: calc(100vh - 74px); }
 
   /* ── Modal ── */
   .modal {
@@ -389,6 +391,7 @@ body {
 
 /* 초소형 (≤380px) */
 @media (max-width: 380px) {
-  .column { width: 240px; }
   .topbar { height: 50px; }
+  /* topbar 50px + padding 20px */
+  .column { width: 240px; max-height: calc(100vh - 70px); }
 }
