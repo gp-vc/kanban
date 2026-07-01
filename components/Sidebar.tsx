@@ -9,15 +9,22 @@ import Avatar from './Avatar';
 import type { FirestoreBoard } from '../lib/types';
 
 const BG_PRESETS = [
-  { id: 'default', label: '기본',   value: '' },
-  { id: 'sky',     label: '하늘',   value: 'linear-gradient(160deg, #dfe9f3 0%, #b8cfd8 100%)' },
-  { id: 'lavender',label: '라벤더', value: 'linear-gradient(160deg, #e8e0f0 0%, #c8b5de 100%)' },
-  { id: 'mint',    label: '민트',   value: 'linear-gradient(160deg, #d4edda 0%, #98d0ae 100%)' },
-  { id: 'peach',   label: '피치',   value: 'linear-gradient(160deg, #fde8d8 0%, #f0b890 100%)' },
-  { id: 'rose',    label: '로즈',   value: 'linear-gradient(160deg, #f9d6e0 0%, #e890a8 100%)' },
-  { id: 'ocean',   label: '오션',   value: 'linear-gradient(160deg, #c9e8f0 0%, #88c5da 100%)' },
-  { id: 'sunset',  label: '선셋',   value: 'linear-gradient(160deg, #fda085 0%, #f6d365 100%)' },
-  { id: 'night',   label: '나이트', value: 'linear-gradient(160deg, #2d1b69 0%, #11998e 100%)' },
+  { id: 'default',  label: '기본',    value: '' },
+  { id: 'sky',      label: '하늘',    value: 'linear-gradient(160deg, #dfe9f3 0%, #b8cfd8 100%)' },
+  { id: 'lavender', label: '라벤더',  value: 'linear-gradient(160deg, #e8e0f0 0%, #c8b5de 100%)' },
+  { id: 'mint',     label: '민트',    value: 'linear-gradient(160deg, #d4edda 0%, #98d0ae 100%)' },
+  { id: 'peach',    label: '피치',    value: 'linear-gradient(160deg, #fde8d8 0%, #f0b890 100%)' },
+  { id: 'rose',     label: '로즈',    value: 'linear-gradient(160deg, #f9d6e0 0%, #e890a8 100%)' },
+  { id: 'ocean',    label: '오션',    value: 'linear-gradient(160deg, #c9e8f0 0%, #88c5da 100%)' },
+  { id: 'sunset',   label: '선셋',    value: 'linear-gradient(160deg, #fda085 0%, #f6d365 100%)' },
+  { id: 'night',    label: '나이트',  value: 'linear-gradient(160deg, #2d1b69 0%, #11998e 100%)' },
+  { id: 'forest',   label: '포레스트',value: 'linear-gradient(160deg, #134e5e 0%, #71b280 100%)' },
+  { id: 'cherry',   label: '체리',    value: 'linear-gradient(160deg, #eb3349 0%, #f45c43 100%)' },
+  { id: 'grape',    label: '그레이프',value: 'linear-gradient(160deg, #4776e6 0%, #8e54e9 100%)' },
+  { id: 'sand',     label: '샌드',    value: 'linear-gradient(160deg, #f5e6c8 0%, #d4b483 100%)' },
+  { id: 'slate',    label: '슬레이트',value: 'linear-gradient(160deg, #d7dee8 0%, #a0afc4 100%)' },
+  { id: 'aurora',   label: '오로라',  value: 'linear-gradient(160deg, #00c6fb 0%, #005bea 100%)' },
+  { id: 'dusk',     label: '황혼',    value: 'linear-gradient(160deg, #fd746c 0%, #ff9068 50%, #a18cd1 100%)' },
 ];
 
 export default function Sidebar() {
