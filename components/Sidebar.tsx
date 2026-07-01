@@ -320,7 +320,7 @@ function BoardItem({
           {menuMode === 'color' && (
             <div style={{ padding: '8px 10px' }}>
               <div style={{ fontSize: 11, color: 'var(--text3)', marginBottom: 8 }}>색상 선택</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 5 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 5 }}>
                 {Object.entries(COL_DOTS).map(([key, hex]) => (
                   <button
                     key={key}

@@ -8,6 +8,34 @@ import Avatar from './Avatar';
 import LabelManagerModal from './LabelManagerModal';
 import type { Task, ActivityLog, FirestoreBoard, UserProfile, Priority } from '../lib/types';
 
+const URL_REGEX = /https?:\/\/[^\s]+/g;
+
+function renderTextWithLinks(text: string) {
+  const parts: React.ReactNode[] = [];
+  let last = 0;
+  let match: RegExpExecArray | null;
+  URL_REGEX.lastIndex = 0;
+  while ((match = URL_REGEX.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index));
+    const url = match[0];
+    parts.push(
+      <a
+        key={match.index}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: 'var(--purple)', textDecoration: 'underline', wordBreak: 'break-all' }}
+        onClick={e => e.stopPropagation()}
+      >
+        {url}
+      </a>
+    );
+    last = match.index + url.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
+
 const PRIORITY_OPTIONS: { value: Priority | ''; label: string; style: React.CSSProperties }[] = [
   { value: '',       label: '없음', style: { background: 'var(--surface2)', color: 'var(--text3)' } },
   { value: 'urgent', label: '긴급', style: { background: 'rgba(239,68,68,0.15)',  color: '#EF4444' } },
@@ -731,7 +759,7 @@ function TaskModalInner({ task, onClose }: { task: Task; onClose: () => void }) 
                             </div>
                           </div>
                         ) : (
-                          <div className="comment-text">{c.text}</div>
+                          <div className="comment-text">{renderTextWithLinks(c.text)}</div>
                         )}
                       </div>
                     </div>

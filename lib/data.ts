@@ -35,6 +35,12 @@ export const COL_DOTS: Record<string, string> = {
   coral:  '#D85A30',
   pink:   '#D4537E',
   gray:   '#888780',
+  indigo: '#5B5BD6',
+  sky:    '#0EA5E9',
+  lime:   '#6DB33F',
+  orange: '#F97316',
+  violet: '#8B5CF6',
+  rose:   '#DB2777',
 };
 
 // Auth 연동 전 임시 사용자 목록 (다음 단계: Firestore users 컬렉션으로 이동)

@@ -12,13 +12,20 @@ interface Props {
 
 const COLOR_OPTIONS = [
   { key: 'purple', label: '보라' },
+  { key: 'indigo', label: '남색' },
+  { key: 'violet', label: '바이올렛' },
   { key: 'blue',   label: '파랑' },
-  { key: 'green',  label: '초록' },
+  { key: 'sky',    label: '하늘' },
   { key: 'teal',   label: '청록' },
+  { key: 'green',  label: '초록' },
+  { key: 'lime',   label: '라임' },
   { key: 'amber',  label: '노랑' },
+  { key: 'orange', label: '주황' },
+  { key: 'coral',  label: '코랄' },
   { key: 'red',    label: '빨강' },
-  { key: 'coral',  label: '주황' },
+  { key: 'rose',   label: '로즈' },
   { key: 'pink',   label: '분홍' },
+  { key: 'gray',   label: '회색' },
 ];
 
 export default function CreateBoardModal({ onClose }: Props) {
