@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'GPVC',
+  title: 'GPVC Task Management',
   description: 'GPVC 구성원 전용 칸반 보드',
 };
 
